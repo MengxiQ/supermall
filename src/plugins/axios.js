@@ -49,11 +49,11 @@
 //       }
 //     },
 //     $axios: {
-//       get() {
-//         return _axios;
-//       }
-//     },
-//   });
+// get() {
+//   return _axios;
+// }
+// },
+// });
 // };
 //
 // Vue.use(Plugin)

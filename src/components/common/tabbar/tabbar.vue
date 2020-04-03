@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="tabbar">
     <slot name="tabaritems"></slot>
     </div>
 </template>
@@ -18,10 +18,11 @@
 <style scoped>
 .tabbar{
     display: flex;
-    height: 39px;
+    /*height: 39px;*/
+    height: 44px;
     width: 100%;
-    background-color: #f9f9f9;
-    box-shadow: 0 -0.5px 1px rgba(0,0,0,0.1);
+    background-color:#fcfcfc;
+    box-shadow: 0 -0.3px 2px rgba(0,0,0,0.1);
     position: fixed;
     left: 0;
     right: 0;

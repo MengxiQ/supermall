@@ -1,8 +1,9 @@
 <template>
     <div :class="{active: isActive}" class="tabbar_item"  @click="itemClick">
-
+        <div class="img">
         <slot name="img_active" v-if="isActive"></slot>
         <slot name="img" v-else></slot>
+        </div>
         <div class="font">
         <slot name="font"></slot>
         </div>
@@ -47,11 +48,16 @@
     img{
         height: 22px;
         width: 22px;
-
+        display: block;
+    }
+    .img{
+        height: 22px;
+        width: 22px;
+        margin: 4px auto auto;
     }
     .font{
         font-family: 微软雅黑;
-        font-size: 10px;
+        font-size: 12px;
     }
     .active{
         color: rgb(212,35,122);
