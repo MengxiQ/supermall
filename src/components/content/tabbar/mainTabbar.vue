@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mainTabber">
         <tabbar>
             <div slot="tabaritems" class="tabbar">
 
@@ -45,5 +45,12 @@
 </script>
 
 <style scoped>
-
+.mainTabber{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:#fcfcfc;
+    box-shadow: 0 -0.3px 2px rgba(0,0,0,0.1);
+}
 </style>

@@ -51,9 +51,11 @@
         display: block;
     }
     .img{
+        /*background-color: rebeccapurple;*/
         height: 22px;
         width: 22px;
-        margin: 4px auto auto;
+        margin:3px auto 3px auto;
+
     }
     .font{
         font-family: 微软雅黑;
