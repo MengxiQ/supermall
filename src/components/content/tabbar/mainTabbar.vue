@@ -1,7 +1,7 @@
 <template>
     <div class="mainTabber">
         <tabbar>
-            <div slot="tabaritems" class="tabbar">
+            <div slot="tabaritems" class="tabControl">
 
                     <tabbar_item :path="'/home'" >
                         <div slot="img" ><img src="../../../assets/img/tabbar/Iron/home.svg" alt=""></div>

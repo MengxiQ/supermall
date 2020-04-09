@@ -5,7 +5,7 @@
              <nav_bar><div slot="center">购物街</div></nav_bar>
         </div>
 <!--        //-->
-        <Scroll :probe_type="3" @content_scroll="content_scroll" @pillingUp="loadmore" ref="Scroll">
+        <Scroll :probe_type="3" :pullUp_load="true" @content_scroll="content_scroll" @pillingUp="loadmore" ref="Scroll">
                 <div class="home_carousels">
                     <carousels :res_banner="res_banner"></carousels>
                 </div>
@@ -14,7 +14,7 @@
         <!--        //-->
                 <ranking-list :re_keywords="re_keywords"></ranking-list>
         <!--        //-->
-                <tab-control :tabControl_title="['流行','新款','精选']" @tabClick="changedata"></tab-control>
+                <tab-control  :tabControl_title="['流行','新款','精选']" @tabClick="changedata"></tab-control>
         <!--        // -->
                 <goods-list :goods="goods[currentType].list"></goods-list>
 
@@ -161,7 +161,8 @@ export default {
         ,
         // 界面控制
         wrapper:{},
-        isShowTotop:false
+        isShowTotop:false,
+
       }
     },
 
@@ -205,6 +206,7 @@ export default {
         }else {
           this.isShowTotop = false;
         }
+        this.scroll_pos= pos;
         //是否加载更多
         // console.log(pos.x,pos.y);
       },
@@ -248,7 +250,7 @@ export default {
          * 模拟
          * **/
         setTimeout(()=>{
-          console.log('加载完毕');
+          console.log('加载完毕数据:'+this.currentType);
           this.$refs.Scroll.finishPullUp();
         },500)
       }
