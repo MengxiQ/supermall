@@ -1,7 +1,7 @@
 <template>
 
     <div class="goodsList">
-        <goods-list-item v-for="(item,index) in goods" :key="index" :goods_item="item"></goods-list-item>
+        <goods-list-item v-for="(item) in goods" :key="item.id" :goods_item="item"></goods-list-item>
     </div>
 
 </template>
@@ -15,6 +15,12 @@
       goods:{
         type:Array,
         default(){return []}
+      },
+      goods_type:{
+        type:String,
+        default() {
+          return '';
+        }
       }
     },
     data(){
@@ -24,8 +30,8 @@
     components:{
       goodsListItem
     },
-    mounted() {
-
+    updated() {
+      console.log(this.goods_type);
     }
 
   }

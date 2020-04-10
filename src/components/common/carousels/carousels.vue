@@ -1,21 +1,11 @@
 <template>
-<!--    <div class="carousels_contair">-->
-<!--        <ul id="carousels" >-->
-<!--            <li class="item" v-for="(item,index) in res_banner" v-bind:key="index"><img :src="item.image" alt=""></li>-->
-<!--        </ul>-->
-        <ul id="carousels">
-            <li class="item" v-for="(item,index) in res_banner" v-bind:key="index"><a :href="item.link"><img :src="item.image" alt=""></a></li>
-
-            <div  class="btn btn_left" ></div>
-            <div  class="btn btn_right"></div>
-            <div id="carousels_point">
-                <li class="point point_active"></li>
-                <li  class="point"></li>
-                <li  class="point"></li>
-                <li  class="point"></li>
-            </div>
+        <ul id="carousels" ref="carousels">
+            <li class="item"
+                v-for="(item,index) in res_banner"
+                v-bind:key="index">
+                <a :href="item.link"><img :src="item.image" alt=""></a>
+            </li>
         </ul>
-<!--    </div>-->
 </template>
 
 <script>
@@ -29,17 +19,38 @@
     },
     data(){
       return{
-
+        carousels:{}
       }
     },
     methods:{
 
     },
     updated() {
-        let carousels = new Carousels();
-        carousels.init({
+        this.carousels = new Carousels();
+        this.carousels.init({
           intervalTime:5000
         });
+
+    },
+    destroyed() {
+      console.log('carouseles被销毁');
+    },
+    activated() {
+      if (this.carousels instanceof Carousels){
+      // 重启计时器
+        console.log('activated:重启计时器');
+
+        this.carousels.drun_teimer();
+      }
+
+
+    },
+    deactivated() {
+      //清除计数器
+      if (this.carousels instanceof Carousels){
+        console.log(' deactivated:清除计数器');
+        this.carousels.clearTimer();
+      }
 
     }
 
@@ -49,9 +60,7 @@
     constructor() {
       this.carousels = document.getElementById('carousels');
       this.items = document.getElementsByClassName('item');
-      this.btn_left = document.getElementsByClassName('btn_left')[0];
-      this.btn_right = document.getElementsByClassName('btn_right')[0];
-      this.points = document.getElementsByClassName('point');
+      this.points = [];
       this.care_num = this.items.length;
       this.active_flag = 0; //记录当前获取的编号
       this.carousels_timer = null; //定时器
@@ -59,53 +68,46 @@
     }
 
     init(config) {
+        if(this.carousels != null) {
+          // console.log(this.carousels);
+          //配置
+          this.intervalTime = config.intervalTime;//毫秒
+          this.showActiveItem();
 
-      //配置
-      this.intervalTime = config.intervalTime;//毫秒
-      this.showActiveItem();
+          //初始化小点
+          this.initPoints();
 
-      //初始化小点
-      this.initPoints();
-      //1.绑定事件
-      if (this.btn_left !== undefined) {
-        this.btn_right.onclick = () => {
-          //先把定时器给关了
-          clearInterval(this.carousels_timer);
-          // console.log('定时器给关了');
-          this.nextitem();
+          this.carousels.onmouseenter = () => {
+            //组件活得焦点，清除定时器
+            clearInterval(this.carousels_timer);
+          }
+          this.carousels.onmouseleave = () => {
+            //当组件失去焦点，重启计时器
+            this.carousels_timer = this.run_timer();
+          }
+          // 2.开启定时器
+          this.carousels_timer = this.run_timer();
         }
-        this.btn_left.onclick = () => {
-          this.preitem();
-        }
-      } else {
-        console.log('你没有添加按钮哦！');
-      }
-      this.carousels.onmouseenter = () => {
-        //组件活得焦点，清除定时器
-        clearInterval(this.carousels_timer);
-      }
-      this.carousels.onmouseleave = () => {
-        //当组件失去焦点，重启计时器
-        this.carousels_timer = this.run_timer();
-      }
-      // 2.开启定时器
-      this.carousels_timer = this.run_timer();
-
-      //控制台消息
-      console.log('欢迎使用梦兮Q的UI组件，请多多支持！   ' +
-        '有任何可以改进的地方，欢迎联系我哦，^_^ !    ' +
-        'QQ邮箱：1486073356@qq.com');
     }
 
     /*
     定义方法
      */
     initPoints() {
+      //动态生成dom
+      let lis = '<li class="point point_active"></li>';
+      for (let i = 1;i < this.items.length;i++){
+        lis += '<li  class="point"></li>';
+      }
+      let str = '<div id="carousels_point">'+lis+ '</div>';
+      let dom_points = this.parseDom(str);
+
+      this.carousels.appendChild(dom_points);
+      this.points = document.getElementsByClassName('point');
       //检测是否添加了小点
       if (this.points.length !== 0) {
         //给每个小点绑定与卡片一样的index，并绑定一个点击事件
         for (let i = 0; i < this.care_num; i++) {
-
           // this.points[i].setAttribute('data-index',i);
           //这里根本就不需要给标签绑定自定义属性值
           //因为这里的值可以直接在下面点击事件中使用，不用传参。
@@ -186,6 +188,21 @@
         this.nextitem()
       }, this.intervalTime));
     }
+    clearTimer(){
+      //外部调用清除计时器
+      console.log('外部调用清除计时器');
+      clearInterval(this.carousels_timer);
+    }
+    drun_teimer(){
+      //外部调用重启计时器。
+      console.log('外部调用重启计时器。');
+      this.carousels_timer = this.run_timer();
+    }
+    parseDom(str){
+      let parent_dom = document.createElement("div");
+      parent_dom.innerHTML = str;
+      return parent_dom.childNodes[0];
+    }
   }
 </script>
 
@@ -259,9 +276,13 @@
         z-index: 0;
         opacity: 1;
     }
+
+</style>
+
+<style>
     /*
-    按钮样式
-    */
+     按钮样式
+     */
     .btn{
         display: var(--btn_isShow);
         border-radius: var(--btn_radius);

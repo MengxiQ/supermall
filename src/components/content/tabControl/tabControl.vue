@@ -86,7 +86,7 @@
           }
         })
 
-        console.log(this.dom_tc,this.home,this.tabControl_box)
+        // console.log(this.dom_tc,this.home,this.tabControl_box)
         //;
       }
     }
@@ -257,8 +257,10 @@
         height: 5px;
         position: absolute;
         background-color: #ff1493;
+        border-radius: 1px;
         bottom: 0;
-        transition: left 0.4s;
+        transition: left 0.3s;
+
     }
     .hover_line{
         position: absolute;

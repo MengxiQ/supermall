@@ -1,19 +1,21 @@
 <template>
-    <div class="goodsListItem">
+    <div class="goodsListItem" >
 <!--        <img src="../../../assets/img/goods/new/03.jpg" alt="">-->
-        <img class="goodsListItem_img" :src="goods_item.show.img" alt="">
-        <span class="goodsListItem_title">{{goods_item.title}}</span>
-        <div class="goodsListItem_desc">
-        <span class="goodsListItem_price">{{goods_item.price | price}}</span>
+        <img class="goodsListItem_img" :src="goods_item.show.img" alt="" >
+        <span class="goodsListItem_title" >{{goods_item.title}}</span>
+        <div class="goodsListItem_desc" >
+        <span class="goodsListItem_price" >{{goods_item.price | price}}</span>
         <span class="goodsListItem_cfac" >{{goods_item.cfav}}</span>
-        <img class="goodsListItem_select" @click="select" v-if="isSelected" src="../../../assets/img/cfav/collect-active.svg" alt="萌系Q">
-        <img class="goodsListItem_select" @click="select" v-else src="../../../assets/img/cfav/collect.svg" alt="萌系Q">
+        <img class="goodsListItem_select" @click="select" v-if="isSelected" src="../../../assets/img/cfav/collect-active.svg" alt="萌系Q" >
+        <img class="goodsListItem_select" @click="select" v-else src="../../../assets/img/cfav/collect.svg"  alt="萌系Q">
         </div>
     </div>
 </template>
 
 <script>
-  export default {
+    import {EventBus} from "../../../bus/event-bus";
+
+    export default {
     name: "goodsListItem",
     data(){
       return{
@@ -26,24 +28,54 @@
         default(){ return {} }
       }
     },
+      computed:{
+      },
     methods:{
       select(){
         if (this.isSelected === false){
           this.goods_item.cfav =(parseInt(this.goods_item.cfav)+1).toString();
-          //更新数据
+          EventBus.$emit('selectedGoods',{id:this.goods_item.id,op:'+'});
+          //更新数据，记得往服务器更新。
         }else{
           this.goods_item.cfav =(parseInt(this.goods_item.cfav)-1).toString();
-          //更新数据
+          EventBus.$emit('selectedGoods',{id:this.goods_item.id,op:'-'});
+          //更新数据,记得往服务器更新。
         }
         this.isSelected = ! this.isSelected;
+      },
+      checkSelected(){
+        // 检查该商品是否被收藏
+        // this.isSelected
+        EventBus.$on('CheckRes',(res) => {
+          res.forEach(item => {
+              if(item === this.goods_item.id){
+                this.isSelected = true;
+              }
+            })
+
+        });
+
+
       }
     },
     filters:{
       price(value){
         return '￥'+value;
       }
+    },
+      mounted() {
+        // console.log('重新挂载1');
+        //判断是否收藏改商品
+         this.checkSelected();
+
+      },
+      updated() {
+        // console.log('更新');
+      },
+      destroyed() {
+        // console.log('我被销毁了1');
+      }
     }
-  }
 </script>
 
 <style scoped>
