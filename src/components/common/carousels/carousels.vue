@@ -14,7 +14,8 @@
     name: "carousels",
     props:{
       res_banner:{
-        type:Array
+        type:Array,
+        default(){return []}
       }
     },
     data(){

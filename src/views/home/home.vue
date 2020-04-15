@@ -54,11 +54,11 @@
         currentType:'pop',
         goods:{
           'pop':{page:1,list:[{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
-              title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
-              price:'99.9',
+              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp',},
+              title:'2020春秋新款韩系连衣裙女法式碎花裙长裙收腰赫本很仙过膝裙',
+              price:'39.99',
               cfav:'66',
-              id:'A0001'
+              iid:'A-001'
             },{
               show:{img:'http://192.168.1.11/goods/new/03.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
@@ -267,14 +267,36 @@
       loadmore() {
         //按类型加载更多数据
         // this.getHomeGoods(this.currentType);
-        //加载完毕2
-        // this.$refs.Scroll.finishPullUp();
+        // //加载完毕2
 
-        setTimeout(() => {
-          console.log('加载完毕数据:' + this.currentType);
-          this.$refs.Scroll.finishPullUp();
-        }, 500)
+        function load() {
+            console.log('加载完毕数据:'+this.currentType);
+            this.$refs.Scroll.finishPullUp();
+        }
+
+        let newload = this.debounce(load,500);
+
+        newload();
+
+
+        // setTimeout(() => {
+        //   console.log('加载完毕数据:' + this.currentType);
+        //   this.$refs.Scroll.finishPullUp();
+        // }, 500);
+
       },
+      debounce(fun,delay){
+        // console.log(this)
+      let timer = null
+      return (...args) => {
+        if (timer) clearTimeout(timer)
+        timer = setTimeout(()=>{
+          // console.log(this)
+          fun.apply(this,args)
+
+        },delay)
+      }
+    }
     },
 
       /**
@@ -282,7 +304,7 @@
       **/
     created() {
       //请求多个数据
-      this.getHomeMulti();
+      // this.getHomeMulti();
       // this.getHomeGoods('pop');
       // this.getHomeGoods('new');
       // this.getHomeGoods('sell');

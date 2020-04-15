@@ -1,7 +1,10 @@
 <template>
     <div class="goodsListItem" >
 <!--        <img src="../../../assets/img/goods/new/03.jpg" alt="">-->
-        <img class="goodsListItem_img" :src="goods_item.show.img" alt="" >
+        <img class="goodsListItem_img"
+             :src="goods_item.show.img"
+             alt=""
+             @click="itemclick">
         <span class="goodsListItem_title" >{{goods_item.title}}</span>
         <div class="goodsListItem_desc" >
         <span class="goodsListItem_price" >{{goods_item.price | price}}</span>
@@ -31,6 +34,15 @@
       computed:{
       },
     methods:{
+      itemclick(){//跳转到详情页
+        // console.log(this.goods_item.iid);
+        this.$router.push({
+          path:"/detail",
+          query:{
+            iid:this.goods_item.iid
+          }
+        });
+      },
       select(){
         if (this.isSelected === false){
           this.goods_item.cfav =(parseInt(this.goods_item.cfav)+1).toString();

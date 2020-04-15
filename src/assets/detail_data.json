@@ -1,0 +1,122 @@
+{
+  "iid" : "A-001",
+  "swipper": {
+    "img": {
+      "lists": [
+        {
+        "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-1.webp"
+      },{
+          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-2.webp"
+        },{
+          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-3.webp"
+        },{
+          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-4.webp"
+        },
+        {
+          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-5.webp"
+        }
+      ]
+    }
+  },
+  "itemInfo":{
+    "desc": "2020春秋新款韩系连衣裙女法式碎花裙长裙收腰赫本很仙过膝裙",
+    "flag": "优惠价",
+    "price": "39.99",
+    "oldPrice": "66.50",
+    "shipping": "12.00元",
+    "services": ["7天无理由退货","72小时发货","延误必赔"]
+  },
+  "choseparam": {
+    "url": "#"
+  },
+  "comment": {
+    "list": [{
+      "user": {
+        "img": "#",
+        "name": "陈阿麻",
+        "url": "#"
+      },
+      "date": "2020年04月10日",
+      "text": "\uD83D\uDE02 真的漂亮漂亮~",
+      "goods": {
+        "color": "米色",
+        "size": "M"
+      }
+    },{
+      "user": {
+        "img": "#",
+        "name": "陈阿麻",
+        "url": "#"
+      },
+      "date": "2020年04月10日",
+      "text": "\uD83D\uDE02 真的漂亮漂亮~",
+      "goods": {
+        "color": "米色",
+        "size": "M"
+      }
+    },{
+      "user": {
+        "img": "#",
+        "name": "陈阿麻",
+        "url": "#"
+      },
+      "date": "2020年04月10日",
+      "text": "\uD83D\uDE02 真的漂亮漂亮~",
+      "goods": {
+        "color": "米色",
+        "size": "M"
+      }
+    }]
+  },
+  "shopInfo": {
+    "logo": "#",
+    "name": "香香家2017",
+    "cFans": "5535",
+    "cSell": "9.5万+",
+    "cGoods": "399",
+    "url": "#"
+  },
+  "goodsDetail": {
+    "adv": "每天两点半前付款有现货的基本可以当天发货哦，支持7天时间无理由包退换，我们是免费送运费险的。让亲们可以无忧无虑的购买",
+    "desc": "穿着效果",
+    "imgs":[
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-001.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-002.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-003.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-004.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-005.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-006.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-007.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-008.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-009.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-010.webp",
+      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/last.webp"
+    ]
+  },
+  "itemParams": {
+    "title": ["尺码","裙长","胸围","袖长"],
+    "row": [
+      {"key":"M", "values":["M","100","88","50"]},
+      {"key":"L", "values":["L","101","92","51"]},
+      {"key":"XL", "values":["XL","102","96","52"]},
+      {"key":"XXL", "values":["XXL","103","100","53"]}
+    ],
+    "others": [
+      {"key":"图案", "values":"碎花"},
+      {"key":"群型", "values":"其他"},
+      {"key":"颜色", "values":"米色"},
+      {"key":"腰型", "values":"XL,L,M,XXL"},
+      {"key":"季节", "values":"春秋"},
+      {"key":"材质", "values":"其他"},
+      {"key":"组合形式", "values":"单件"},
+      {"key":"领型", "values":"V领"},
+      {"key":"裙长", "values":"中裙（91-105cm）"},
+      {"key":"袖长", "values":"长袖"},
+      {"key":"风格", "values":"甜美"}
+    ],
+    " recommend": {
+      "list": ["","","",""]
+    }
+  }
+
+}
