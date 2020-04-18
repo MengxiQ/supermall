@@ -6,19 +6,24 @@
             <div class="line_right"><span class="poin_right"></span></div>
         </div>
         <div class="desc">{{goodsDetail.desc}}</div>
-        <div class="imgs">
+        <div class="imgs" ref="imgs">
             <img v-for="(item,index) in goodsDetail.imgs" :key="index" :src="item" alt="">
         </div>
-        <item-params :itemParems="itemParems"></item-params>
+        <item-params :itemParems="itemParems" ref="itemParems"></item-params>
+        <h4 class="recommendTitle">热卖推荐</h4>
+        <recommend :goods_style="goodsDetail.goodsStyle" ref="recommend"></recommend>
     </div>
 </template>
 
 <script>
     import itemParams from "./goodsDetailChidrens/itemParams";
+    import recommend from "@/components/content/recommend/recommend";
+
   export default {
     name: "goodsDetail",
     components:{
-      itemParams
+      itemParams,
+      recommend,
     },
     props:{
       goodsDetail:{
@@ -81,5 +86,9 @@
         position: absolute;
         top: -3px;
         right: 0;
+    }
+    .recommendTitle{
+        text-align: center;
+        margin:20px 0;
     }
 </style>

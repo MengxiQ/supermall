@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper" ref="wrapper">
-        <ul class="content" ref="content">
+    <div class="dwrapper" ref="dwrapper">
+        <ul class="dcontent" ref="dcontent">
             <img class="item" :src="item.url" alt=""
                 v-for="(item,index) in res_banner"
                 v-bind:key="index">
@@ -38,25 +38,27 @@
 </script>
 
 <style scoped>
-    .wrapper{
+    .dwrapper{
         background-color: #fcfcfc;
         overflow-x: scroll;
         overflow-y: hidden;
         position: relative;
         height:400px ;
+        width: 100%;
     }
-    .content{
+    .dcontent{
         display: block;
         position: absolute;
         /*width: 1600px;*/
         width: 1400px;
+        height: 400px;
         /*left: -260px;*/
-        left: 0px;
+        left: 0;
         transition: left cubic-bezier(0.5,0,0.5,1) 1s;
 
     }
     .item{
-        padding: 5px 0px;
+        padding: 1px 0px;
         border-radius: 2px;
         display: inline-block;
         width: 250px;

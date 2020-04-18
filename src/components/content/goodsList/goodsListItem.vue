@@ -8,9 +8,10 @@
         <span class="goodsListItem_title" >{{goods_item.title}}</span>
         <div class="goodsListItem_desc" >
         <span class="goodsListItem_price" >{{goods_item.price | price}}</span>
-        <span class="goodsListItem_cfac" >{{goods_item.cfav}}</span>
+        <span class="goodsListItem_cfac" >{{goods_item.cfav}}
         <img class="goodsListItem_select" @click="select" v-if="isSelected" src="../../../assets/img/cfav/collect-active.svg" alt="萌系Q" >
         <img class="goodsListItem_select" @click="select" v-else src="../../../assets/img/cfav/collect.svg"  alt="萌系Q">
+        </span>
         </div>
     </div>
 </template>
@@ -92,51 +93,65 @@
 
 <style scoped>
     .goodsListItem{
-        /*background-color: rebeccapurple;*/
         height: 260px;
         width: 47%;
         overflow: hidden;
         font-size: 14px;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        background-color: white;
+        border-radius: 5px;
         margin: 5px;
-        padding: 2px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        /*padding: 10px;*/
+        display: inline-block;
+
     }
     .goodsListItem_img{
+        display: block;
+        background-color: #e095c1;
         height: 210px;
         width: 100%;
         overflow: hidden;
+        border-radius: 5px;
+        color: #f9f9f9;
     }
     .goodsListItem_title{
         /*background-color: rebeccapurple;*/
+        height: 18px;
+        line-height: 18px;
         display: block;
-        height: 16px;
         overflow: hidden;
+        padding: 0 1px;
     }
     .goodsListItem_desc{
-        /*background-color: rosybrown;*/
+        margin-top: 5px;
+        /*background-color: #e031a7;*/
         display: flex;
         align-items : center;
-        justify-content : space-around;
+        justify-content: space-between;
     }
     .goodsListItem_desc>span{
         display: inline-block;
     }
     .goodsListItem_price{
         color:var(--color-tint);
-        /*background-color: rebeccapurple;*/
-        padding-right: 40px;
+        font-weight: bold;
+
     }
     .goodsListItem_cfac{
-        padding-left: 40px;
+        display: inline-block;
+        /*background-color: #e031a7;*/
+        font-size: 12px;
+        width: 40px;
+        position: relative;
+        padding: 2px;
+        color: #7a7a7a;
+
     }
     .goodsListItem_select{
-        display: inline-block;
-        height: 20px;
+        /*height: 20px;*/
         width: 20px;
-        transition: all 1s;
-        background-color: #f9f9f9;
+        position: absolute;
+        top: -1.5px;
+        left: 18px;
     }
 </style>

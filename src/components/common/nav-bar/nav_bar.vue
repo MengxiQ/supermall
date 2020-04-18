@@ -29,7 +29,7 @@
         text-align: center;
         line-height: 44px;
 
-        box-shadow: 0px 0.3px 2px rgba(0,0,0,0.2) ;
+        /*box-shadow: 0px 0.3px 2px rgba(0,0,0,0.2) ;*/
     }
     .nav_bar_left{
         height: 100%;

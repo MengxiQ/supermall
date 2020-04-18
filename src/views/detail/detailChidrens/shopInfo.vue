@@ -31,7 +31,7 @@
     .logo{
         height:80px;
         width: 80px;
-        background-color:rosybrown;
+        background-color: #f977c8;
         display: inline-block;
         overflow: hidden;
     }
@@ -40,7 +40,7 @@
         display: inline-block;
         overflow: hidden;
         height: 80px;
-        width: 240px;
+        width: 200px;
         /*background-color: #e031a7;*/
 
         padding:2px 8px;

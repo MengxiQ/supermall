@@ -4,16 +4,16 @@
     "img": {
       "lists": [
         {
-        "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-1.webp"
+        "url": "http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp"
       },{
-          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-2.webp"
+          "url": "http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-2.webp"
         },{
-          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-3.webp"
+          "url": "http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-3.webp"
         },{
-          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-4.webp"
+          "url": "http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-4.webp"
         },
         {
-          "url": "http://localhost/static/images/goodsdetail/A-001/swiper/A-001-5.webp"
+          "url": "http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-5.webp"
         }
       ]
     }
@@ -77,20 +77,24 @@
     "url": "#"
   },
   "goodsDetail": {
+    "goodsStyle": {
+      "style": "甜美",
+      "type": "长裙"
+    },
     "adv": "每天两点半前付款有现货的基本可以当天发货哦，支持7天时间无理由包退换，我们是免费送运费险的。让亲们可以无忧无虑的购买",
     "desc": "穿着效果",
     "imgs":[
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-001.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-002.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-003.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-004.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-005.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-006.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-007.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-008.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-009.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/AD-010.webp",
-      "http://localhost/static/images/goodsdetail/A-001/goodsdetail/last.webp"
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-001.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-002.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-003.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-004.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-005.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-006.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-007.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-008.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-009.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/AD-010.webp",
+      "http://localhost/untitled3/static/images/goodsdetail/A-001/goodsdetail/last.webp"
     ]
   },
   "itemParams": {
@@ -118,5 +122,4 @@
       "list": ["","","",""]
     }
   }
-
 }

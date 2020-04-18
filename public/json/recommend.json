@@ -1,0 +1,24 @@
+{
+  "type":"裙子",
+  "style":"甜美",
+  "list":[{
+    "img":"http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp",
+    "name":"好看漂亮的流行碎花长裙",
+    "price":"99.9"
+  },
+    {
+      "img":"http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp",
+      "name":"好看漂亮的流行碎花长裙",
+      "price":"99.9"
+    },
+    {
+      "img":"http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp",
+      "name":"好看漂亮的流行碎花长裙",
+      "price":"99.9"
+    },
+    {
+      "img":"http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp",
+      "name":"好看漂亮的流行碎花长裙",
+      "price":"99.9"
+    }]
+}

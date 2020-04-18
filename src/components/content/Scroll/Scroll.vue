@@ -9,7 +9,7 @@
 <script>
   //插件
   import BScroll from 'better-scroll';
-  import {EventBus} from "../../../bus/event-bus";
+  // import {EventBus} from "../../../bus/event-bus";
 
   export default {
     name: "Scroll",
@@ -26,6 +26,10 @@
       pullUp_load:{
         type: Boolean,
         defaults: false
+      },
+      eventPassthrough:{
+        type:String,
+        defaults:''
       }
     },
     methods:{
@@ -36,15 +40,21 @@
         //加载完毕
         this.wrapper.finishPullUp();
         //刷新Scroll计算的高度
+        this.refresh();
+      },
+      refresh(){//手动刷新一下BS计算的高度
         this.wrapper.refresh();
       }
     },
     mounted() {
      //1.创建BScroll对象
+     //  console.log("创建bs");
       this.wrapper = new BScroll(this.$refs.wrapper,{
         click:true,
         probeType:this.probe_type,
         pullUpLoad:this.pullUp_load,
+        // eventPassthrough:"horizontal"
+        eventPassthrough:this.eventPassthrough
         // momentum:false
       });
       //2.监听滑动事件
@@ -54,7 +64,7 @@
         this.$emit('content_scroll',pos);
 
         //发到事件总线上
-        EventBus.$emit('home_scroll',pos)
+        // EventBus.$emit('home_scroll',pos)
       })
       //3.监听上拉到底部
       this.wrapper.on('pullingUp',() =>{
@@ -67,6 +77,8 @@
         this.$emit('pillingUp');
       })
 
+      //数据挂载之后，手动刷新一下BS计算的高度，防止滑动的bug
+      this.refresh()
     }
   }
 </script>
@@ -77,6 +89,7 @@
         position: absolute;
         top: 44px;
         bottom: 44px;
+        width: 100%;
 
     }
 

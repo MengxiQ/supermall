@@ -1,12 +1,13 @@
 <template>
 
-    <div id="home">
+    <div id="home" ref="home">
 <!--        //-->
         <div class="home_nav_bar">
-             <nav_bar><div slot="center">购物街</div></nav_bar>
+             <nav_bar :key="'homenavbar'"><div slot="center">购物街</div></nav_bar>
         </div>
 <!--        //-->
-        <Scroll :probe_type="3" :pullUp_load="true" @content_scroll="content_scroll" @pillingUp="loadmore" ref="Scroll">
+        <Scroll :probe_type="3" :pullUp_load="true" @content_scroll="content_scroll" @pillingUp="loadmore" ref="Scroll"
+                :key="'home Scroll'">
                 <div class="home_carousels">
                     <carousels :res_banner="res_banner"></carousels>
                 </div>
@@ -15,7 +16,14 @@
         <!--        //-->
                 <ranking-list :re_keywords="re_keywords"></ranking-list>
         <!--        //-->
-                <tab-control  :tabControl_title="['流行','新款','精选']" @tabClick="changedata"></tab-control>
+                <div class="hometbc">
+                <tab-control  :tabControl_title="['流行','新款','精选']"
+                              @tabClick="changedata"
+                              ref="homeTabControl"
+                >
+
+                </tab-control>
+                </div>
         <!--        // -->
                 <goods-list :goods="goods[currentType].list" :goods_type="currentType"></goods-list>
 
@@ -206,6 +214,7 @@
        * 方法
        * **/
 
+      //监听tabControl的点击事件
       changedata(index) {
         // console.log('111');
         switch (index) {
@@ -223,12 +232,20 @@
           }
         }
       },
+      //监听Scroll的滚动事件
       content_scroll(pos) {
-        //是否显示返回顶部按钮
+
+        /**是否显示返回顶部按钮
+         * */
         this.isShowTotop = (-pos.y) > 200;
         this.scroll_pos = pos;
-        //是否加载更多
-        // console.log(pos.x,pos.y);
+
+        /**tabcontrol吸顶效果
+         * */
+        let rootDOM = this.$refs.home;
+        this.$refs.homeTabControl.autofixed(rootDOM,pos);
+
+
       },
       toTopClick() {
         //回到顶部
@@ -353,6 +370,7 @@
         background-color:#f9f9f9;
         position: relative;
         height: 100vh;
+        overflow: hidden;
     }
     .home_nav_bar{
         color: white;
@@ -368,6 +386,11 @@
 
     .home_carousels{
         /*padding-top: 44px;*/
+    }
+    .hometbc{
+        background-color: #f6f6f6;
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.05);
+        /*width: 100%;*/
     }
 
 </style>

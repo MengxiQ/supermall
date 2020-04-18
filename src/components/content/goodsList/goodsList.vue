@@ -1,7 +1,11 @@
 <template>
 
     <div class="goodsList">
-        <goods-list-item v-for="(item) in goods" :key="item.id" :goods_item="item"></goods-list-item>
+        <goods-list-item v-for="(item) in goods"
+                         :key="item.id"
+                         :goods_item="item">
+
+        </goods-list-item>
     </div>
 
 </template>
@@ -41,9 +45,11 @@
 
 .goodsList{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-around;*/
     /*margin-bottom: 44px;*/
     /*background-color: rebeccapurple;*/
 
