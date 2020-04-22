@@ -10,35 +10,48 @@
         </td>
         <td class="joinCart" @click="addCart"
             >加入购物车
-            <span class="point" ref="point"
-                  :class="{anim:isAnim}"></span></td>
         <td class="buyNow">立即购买</td>
     </tr>
     </table>
 </template>
 
 <script>
+
   export default {
     name: "toolbar",
+    props:{
+      cartProduct:{
+        type:Object,
+        default(){
+          return {}
+        }
+      }
+    },
     data(){
       return{
         publicPath:process.env.BASE_URL,
         title:[{key:'shop',value:'店铺'},{key:'services',value:'客服'},{key:'collect',value:'收藏'}],
         isCurrent:null,
-        isAnim:false
+
       }
     },
+
     methods:{
       btnClick(index){
         this.isCurrent = index;
       },
       addCart(){
-        console.log('加入购物车！');
-        this.isAnim = true;
+        //判断是否有该商品
+       if(this.cartProduct.iid !== undefined){
+        //将数据对象提交到vuex
+        if (this.cartProduct) {
+          this.$store.dispatch("addToCart", this.cartProduct).then(res => {
+            //action 的promise返回信息
+            console.log(res);
+          })
+         }
+        }
       },
-      showanim(){
-
-      }
     }
 
   }
@@ -46,9 +59,10 @@
 
 <style scoped>
     .tollbar_box{
+        box-shadow: -1px 0 2px rgba(143, 143, 143, 0.11);
     }
     table,td,tr{
-        border: rgba(241, 241, 241, 0.36) 2px solid ;
+        border: rgba(227, 227, 227, 0.42) 1px solid ;
     }
     table{
         background-color: white;

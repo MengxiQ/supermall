@@ -6,8 +6,12 @@
              <nav_bar :key="'homenavbar'"><div slot="center">购物街</div></nav_bar>
         </div>
 <!--        //-->
-        <Scroll :probe_type="3" :pullUp_load="true" @content_scroll="content_scroll" @pillingUp="loadmore" ref="Scroll"
-                :key="'home Scroll'">
+        <Scroll :probe_type="3"
+                :pullUp_load="true"
+                @content_scroll="content_scroll"
+                @pillingUp="loadmore"
+                ref="Scroll"
+                :key="'homeScroll'">
                 <div class="home_carousels">
                     <carousels :res_banner="res_banner"></carousels>
                 </div>
@@ -28,7 +32,11 @@
                 <goods-list :goods="goods[currentType].list" :goods_type="currentType"></goods-list>
 
         </Scroll>
-        <to-Top v-show="isShowTotop" @click.native="toTopClick"></to-Top>
+        <!--        回到顶部按钮-->
+        <!--        混入-->
+        <to-top @click.native="toTop"
+                v-show="isShowTotop"
+        ></to-top>
     </div>
 </template>
 <script>
@@ -43,13 +51,17 @@
     import tabControl from "../../components/content/tabControl/tabControl";
     import goodsList from "../../components/content/goodsList/goodsList";
     import Scroll from "../../components/content/Scroll/Scroll";
-    import toTop from "../../components/content/Scroll/toTop";
+    // import toTop from "../../components/content/Scroll/toTop";
 
     //网络请求
     import {getHomeMultidata,getHomeGoodsdata} from "../../network/home";
 
     //事件总线
     import {EventBus} from "../../bus/event-bus";
+
+    //混入对象
+    import {toTop} from "@/common/mixin";
+
 
     export default {
     name: "home",
@@ -60,6 +72,7 @@
         res_recommend:[],
         re_keywords:[],
         currentType:'pop',
+        //
         goods:{
           'pop':{page:1,list:[{
               show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp',},
@@ -68,17 +81,18 @@
               cfav:'66',
               iid:'A-001'
             },{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
+              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-2.webp',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
-              price:'99.9',
-              cfav:'66',
-              id:'A0002'
+              price:'50.99',
+              cfav:'16',
+              iid:'A-002'
             }
             ,{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
+              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-3.webp',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
-              price:'99.9',
-              cfav:'66'
+              price:'9.99',
+              cfav:'1000',
+                iid:'A-003'
             },{
               show:{img:'http://192.168.1.11/goods/new/03.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
@@ -189,7 +203,6 @@
         // 界面控制
         scroll_pos:{x:0,y:0},
         wrapper:{},
-        isShowTotop:false,
 
       }
     },
@@ -197,7 +210,6 @@
      * 组件
      * **/
     components:{
-      toTop,
       Scroll,
       nav_bar,
       carousels,
@@ -207,7 +219,7 @@
       goodsList
 
     },
-
+      mixins:[toTop],
 
     methods: {
       /***
@@ -234,11 +246,11 @@
       },
       //监听Scroll的滚动事件
       content_scroll(pos) {
-
-        /**是否显示返回顶部按钮
-         * */
-        this.isShowTotop = (-pos.y) > 200;
         this.scroll_pos = pos;
+        //混入
+        //是否显示返回顶部按钮
+        this.isShowtoTop(pos);
+
 
         /**tabcontrol吸顶效果
          * */
@@ -247,13 +259,11 @@
 
 
       },
-      toTopClick() {
-        //回到顶部
-        this.$refs.Scroll.to_pos(0, 0, 1000);
-      },
-      toOriginal() {
-        console.log(this.scroll_pos);
-      },
+      // toTopClick() {
+      //   //回到顶部
+      //   this.$refs.Scroll.to_pos(0, 0, 1000);
+      // },
+
 
 
       /***
@@ -341,7 +351,6 @@
     },
       updated() {
         // console.log('发送更新事件');
-
         //把收藏内容发送给
         EventBus.$emit('CheckRes',this.selectedGoodslist);
 
@@ -389,7 +398,7 @@
     }
     .hometbc{
         background-color: #f6f6f6;
-        box-shadow: 0px 0px 2px rgba(0,0,0,0.05);
+        box-shadow: 0 0 2px rgba(0,0,0,0.05);
         /*width: 100%;*/
     }
 

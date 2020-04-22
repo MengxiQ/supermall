@@ -1,8 +1,10 @@
 <template>
     <ul class="cateView">
         <li class="item" v-for="(item,index) in currentViewData"
-            :key="index">
-            <a href=""><img class="img" :src="item.img" alt=""></a>
+            :key="index"
+            @click="itemClick(item.title)"
+        >
+            <img class="img" :src="item.img" alt="">
             <div class="title">{{item.title}}</div>
         </li>
     </ul>
@@ -14,9 +16,11 @@
     props: {
       currentViewData: {
         type: Array,
-        // default() {
-        //   return []
-        // }
+      }
+    },
+    methods:{
+      itemClick(itemTitle){
+        alert('跳转到分类展示页，当前分类为：'+itemTitle);
       }
     }
   }
@@ -44,7 +48,7 @@
         text-align: center;
         display: inline-block;
         width: 50%;
-        margin-bottom: 15px;
+        margin-top: 15px;
         font-size: 14px;
     }
     .img{
@@ -52,6 +56,7 @@
         background-color: #e095c1;
         height:110px;
         width: 110px;
+        border-radius: 8px;
     }
 
 </style>

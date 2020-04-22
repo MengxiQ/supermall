@@ -9,8 +9,8 @@
         <div class="goodsListItem_desc" >
         <span class="goodsListItem_price" >{{goods_item.price | price}}</span>
         <span class="goodsListItem_cfac" >{{goods_item.cfav}}
-        <img class="goodsListItem_select" @click="select" v-if="isSelected" src="../../../assets/img/cfav/collect-active.svg" alt="萌系Q" >
-        <img class="goodsListItem_select" @click="select" v-else src="../../../assets/img/cfav/collect.svg"  alt="萌系Q">
+        <img class="goodsListItem_select" @click="select" v-if="isSelected" src="@/assets/img/cfav/collect-active.svg" alt="萌系Q" >
+        <img class="goodsListItem_select" @click="select" v-else src="@/assets/img/cfav/collect.svg" alt="萌系Q">
         </span>
         </div>
     </div>
@@ -126,13 +126,14 @@
         margin-top: 5px;
         /*background-color: #e031a7;*/
         display: flex;
-        align-items : center;
         justify-content: space-between;
     }
     .goodsListItem_desc>span{
+
         display: inline-block;
     }
     .goodsListItem_price{
+            font-size: 16px;
         color:var(--color-tint);
         font-weight: bold;
 
@@ -140,18 +141,21 @@
     .goodsListItem_cfac{
         display: inline-block;
         /*background-color: #e031a7;*/
-        font-size: 12px;
+        font-size: 14px;
         width: 40px;
         position: relative;
         padding: 2px;
         color: #7a7a7a;
+            margin-right: 30px;
+            /*background-color: deeppink;*/
+            text-align: right;
 
     }
     .goodsListItem_select{
         /*height: 20px;*/
         width: 20px;
         position: absolute;
-        top: -1.5px;
-        left: 18px;
+        top: -1px;
+        left: 42px;
     }
 </style>
