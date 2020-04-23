@@ -49,7 +49,7 @@
         display: inline-block;
         width: 50%;
         margin-top: 15px;
-        font-size: 14px;
+        font-size: 13px;
     }
     .img{
         display: inline-block;

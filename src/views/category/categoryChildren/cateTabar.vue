@@ -38,7 +38,8 @@
     }
     .cateTabar{
         position: absolute;
-        background-color: #ebebeb;
+        background-color: #f5f5f5;
+
         width: 25%;
         /*height: 100vh;*/
         bottom: 44px;
@@ -46,15 +47,19 @@
         min-height: 500px;
         overflow-x: hidden;
         overflow-y: scroll;
+        font-weight: 500;
+        font-size: 16px;
     }
     ::-webkit-scrollbar{
         display: none;
     }
     .item{
+        /*background: white;*/
         text-align: center;
-        padding: 12px 0;
-        margin-top: 0;
+        padding: 10px 0;
+        /*margin-top: 0;*/
         transition: all 0.2s;
+        /*margin-top: 1px;*/
     }
     .isActive{
         background-color: white;

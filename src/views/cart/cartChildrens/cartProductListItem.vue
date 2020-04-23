@@ -7,7 +7,11 @@
         <div class="rightbox">
             <div class="name">{{product.name}}</div>
             <div class="price">￥{{product.price}}</div>
-            <div class="count">x{{product.count}}</div>
+            <div class="count">
+                <button class="decrease"  @click="decrease">-</button>
+                <button class="text" disabled>{{product.count}}</button>
+                <button class="increase" @click="increase">+</button>
+            </div>
         </div>
     </div>
 </template>
@@ -17,25 +21,37 @@
   export default {
     name: "cartProductListItem",
     components: {Checkbotton},
-    props:{
-      product:{
-        type:Object,
-        default(){return {}}
+    props: {
+      product: {
+        type: Object,
+        default() {
+          return {}
+        }
       }
     },
-    data(){
-      return{
+    computed: {
+      isCheck() {
+        return this.product.isCheck
+      },
+      isTooSmall() {
+        return !(this.product.count > 1);
 
       }
     },
-    computed:{
-      isCheck(){
-        return this.product.isCheck
-      }
-    },
-    methods:{
-      checkClick(){
-        this.$store.commit("changeCheck",this.product.iid);
+    methods: {
+      checkClick() {
+        this.$store.commit("changeCheck", this.product.iid);
+      },
+      //商品数量+1
+      increase() {
+        this.$store.commit("increaseCount", this.product.iid);
+      },
+      decrease() {
+        if (!this.isTooSmall) {
+          this.$store.commit("decreaseCount", this.product.iid);
+        } else {
+          alert('不能再少了~');
+        }
       }
     }
   }
@@ -84,6 +100,7 @@
     .img{
         height: 100px;
         width: 25%;
+        max-width: 100px;
         padding: 4px;
 
     }
@@ -126,8 +143,40 @@
         font-size: smaller;
         color: #8e8e8e;
         padding-right: 15px;
-        /*font-size: larger;*/
+
+        --border-width:1px ;
+        --border-color: #dfdfdf;
+    }
+    .increase,.decrease,.text{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        overflow: hidden;
+        border: none;
+        background-color:white;
+    }
+    .count>.increase{
+        /*background-color: #ff5777;*/
+        border-left: var(--border-color) var(--border-width) solid;
+        border-right: var(--border-color) var(--border-width) solid;
+        border-top: var(--border-color) var(--border-width) solid;
+        border-bottom: var(--border-color) var(--border-width) solid;
+
+
+
+    }
+    .count>.decrease{
         /*background-color: #e095c1;*/
+        border-left: var(--border-color) var(--border-width) solid;
+        border-right: var(--border-color) var(--border-width) solid;
+        border-top: var(--border-color) var(--border-width) solid;
+        border-bottom: var(--border-color) var(--border-width) solid;
+    }
+    .count>.text{
+        /*background-color: cornflowerblue;*/
+        border-top: var(--border-color) var(--border-width) solid;
+        border-bottom: var(--border-color) var(--border-width) solid;
     }
 
 

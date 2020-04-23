@@ -4,7 +4,7 @@
             <div class="checkbtn_iron"><checkbotton :isCheck="isCheckAll"/></div>
                 全选
             </div>
-        <div class="totalPrice">合计:￥{{totalPrice}}</div>
+        <div class="totalPrice">合计:<span>￥{{totalPrice}}</span></div>
         <div class="Settlement" @click="Settlement">结算({{checkedCount}})</div>
     </div>
 </template>
@@ -23,7 +23,7 @@
         this.$store.dispatch("changeCheckAll");
       },
       Settlement(){
-        alert('正在为你结算！')
+        alert('正在为你结算！跳到结算页面~');
       }
     }
   }
@@ -37,7 +37,7 @@
         bottom: 44px;
         width: 100%;
         line-height: 44px;
-        box-shadow: -1px 0 2px rgba(224, 224, 224, 0.37);
+        box-shadow: -1px 0 1px rgba(224, 224, 224, 0.6);
     }
     .checkbtn,.totalPrice,.Settlement{
         display: inline-block;
@@ -60,6 +60,10 @@
         /*background-color: #e031a7;*/
         width: 30%;
         /*min-width: 120px;*/
+
+    }
+    .totalPrice>span{
+        color: var(--color-tint);
     }
     .Settlement{
         background-color: deeppink;

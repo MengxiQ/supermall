@@ -75,14 +75,17 @@
         //把事件传出去，让home加载更多，
         //然后加载完毕后调用 finishPullUp方法。
         this.$emit('pillingUp');
-      })
+      });
       //3.监听滚动结束
       this.wrapper.on("scrollEnd",(pos)=>{
         this.$emit('scrollEnd',pos);
       });
 
       //数据挂载之后，手动刷新一下BS计算的高度，防止滑动的bug
-      this.refresh()
+      this.refresh();
+      window.onresize = () => {
+        this.refresh();
+      }
     }
   }
 </script>

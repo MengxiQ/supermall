@@ -6,7 +6,8 @@
             </span></h1>
         <span class="tag">优惠价</span>
 
-        <div class="desc">{{itemInfo.desc}} <span class="tag2">帮我选</span></div>
+        <div class="desc">{{itemInfo.desc}}
+            <span class="tag2" @click="helpSelect"> <img src="@/assets/img/detail/ai.svg" alt=""><span>帮我选</span></span></div>
         <div class="shipping">运费:{{itemInfo.shipping}}</div>
     </div>
         <div class="service">
@@ -30,6 +31,11 @@
     props:{
       itemInfo:{
         type:Object
+      }
+    },
+    methods:{
+      helpSelect(){
+        alert("helpSelect还没有开发~")
       }
     }
   }
@@ -77,16 +83,33 @@
     .tag2{
         position: absolute;
         font-size: 14px;
-        background-color: rgba(210, 210, 210, 0.38);
+        background-color: rgba(0, 0, 0, 0.09);
         display: block;
         height: 30px;
-        line-height: 30px;
+        /*line-height: 30px;*/
         width: 110px;
         right: -15px;
         bottom: 18px;
         border-radius: 20px;
-        padding-left: 40px;
-        color: #8f8f8f;
+        padding-left:5px;
+        overflow: hidden;
+        box-shadow: 1px  1px 1px rgba(0, 0, 0, 0.11);
+        color: #757575;
+
+    }
+    .tag2>img{
+        display: inline-block;
+        height: 25px;
+        /*background-color: #ff5777;*/
+        margin: 2px 4px;
+    }
+    .tag2>span{
+        margin: 2px 4px;
+        display: inline-block;
+        height: 24px;
+        line-height: 25px;
+        overflow: hidden;
+        /*background-color: palevioletred;*/
     }
     .service{
         font-size: 12px;
