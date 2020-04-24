@@ -58,5 +58,7 @@
         width: 110px;
         border-radius: 8px;
     }
-
+    ::-webkit-scrollbar{
+        /*display: none;*/
+    }
 </style>

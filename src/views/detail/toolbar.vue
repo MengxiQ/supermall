@@ -1,24 +1,29 @@
 <template>
-    <table>
-    <tr class="tollbar_box">
-        <td v-for="(item,index) in title" :key="index"
-            :class="{item:true,isActive:index === isCurrent}" @click="btnClick(index)">
-            <img v-if="isCurrent !== index "
-                 :src="publicPath+'toolbar/'+item.key+ '.svg'" alt="">
-            <img v-else :src="publicPath+'toolbar/'+item.key+'_active.svg' " alt="">
-            <div class="title">{{item.value}}</div>
-        </td>
-        <td class="joinCart" @click="addCart"
-            >加入购物车
-        <td class="buyNow">立即购买</td>
-    </tr>
-    </table>
+    <div class="toolbar" >
+        <table>
+        <tr class="tollbar_box">
+            <td v-for="(item,index) in title" :key="index"
+                :class="{item:true,isActive:index === isCurrent}" @click="btnClick(index)">
+                <img v-if="isCurrent !== index "
+                     :src="publicPath+'toolbar/'+item.key+ '.svg'" alt="">
+                <img v-else :src="publicPath+'toolbar/'+item.key+'_active.svg' " alt="">
+                <div class="title">{{item.value}}</div>
+            </td>
+            <td class="joinCart" @click="addCart"
+                >加入购物车
+            <td class="buyNow">立即购买</td>
+        </tr>
+        </table>
+<!--        <toast ref="toolbar_toast"></toast>-->
+    </div>
 </template>
 
 <script>
 
+  // import Toast from "../../components/common/toast";
   export default {
     name: "toolbar",
+    // components: {Toast},
     props:{
       cartProduct:{
         type:Object,
@@ -46,8 +51,9 @@
         //将数据对象提交到vuex
         if (this.cartProduct) {
           this.$store.dispatch("addToCart", this.cartProduct).then(res => {
-            //action 的promise返回信息
-            console.log(res);
+            //显示toast信息
+            this.$toast.show(res,1500);
+
           })
          }
         }
@@ -58,6 +64,9 @@
 </script>
 
 <style scoped>
+    .toolbar{
+        width: 100%;
+    }
     .tollbar_box{
         box-shadow: -1px 0 2px rgba(143, 143, 143, 0.11);
     }
@@ -107,20 +116,6 @@
         line-height: 54px;
         color: #fafafa;
     }
-    .point{
-        display: inline-block;
-        background-color: peru;
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        right: 40px;
-        top: 10px;
-        z-index: 20;
-        opacity: 0;
 
-
-    }
-    .anim{
-    }
 
 </style>

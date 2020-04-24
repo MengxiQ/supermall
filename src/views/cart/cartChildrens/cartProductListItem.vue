@@ -50,7 +50,7 @@
         if (!this.isTooSmall) {
           this.$store.commit("decreaseCount", this.product.iid);
         } else {
-          alert('不能再少了~');
+          this.$toast.show('该商品不能再少了~');
         }
       }
     }

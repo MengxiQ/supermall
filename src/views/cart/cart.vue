@@ -37,7 +37,7 @@
     },
     methods:{
       manageCart(){
-        alert('别点了~还没有开发该模块功能~')
+        this.$toast.show('别点了~还没有开发该模块功能~')
       }
     }
   }

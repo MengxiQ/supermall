@@ -5,7 +5,7 @@
              slot="left"
              @click="routerback"
              src="@/assets/img/navIron/navback.svg" alt="">
-        <img class="right" slot="right" src="@/assets/img/navIron/navcart.svg" alt="">
+        <img @click="toCart"  class="right" slot="right" src="@/assets/img/navIron/navcart.svg" alt="">
     </nav_bar>
     </div>
 </template>
@@ -20,6 +20,9 @@
     methods:{
       routerback(){
         this.$router.back();
+      },
+      toCart(){
+        this.$router.push('/cart');
       }
     }
   }

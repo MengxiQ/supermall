@@ -23,7 +23,7 @@
         this.$store.dispatch("changeCheckAll");
       },
       Settlement(){
-        alert('正在为你结算！跳到结算页面~');
+       this.$toast.show('正在为你结算！跳到结算页面~');
       }
     }
   }
