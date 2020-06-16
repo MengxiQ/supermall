@@ -3,7 +3,7 @@ export function request(config) {
   //1.创建axios的实例ru
   const instance = axios.create({
     // baseURL:'http://123.207.32.32:8000',
-    baseURL:"http://localhost:80",
+    baseURL:"http://106.52.236.120:8080",
     // method:'get',
     timeout:5000,
 

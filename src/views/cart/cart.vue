@@ -54,7 +54,7 @@
 
     }
     .cartNavbar{
-        position: fixed;
+        position: absolute;
         background-color: deeppink;
         height: 44px;
         width: 100%;

@@ -3,25 +3,25 @@
         <tabbar>
             <div slot="tabaritems" class="tabControl">
 
-                    <tabbar_item :path="'/home'" >
+                    <tabbar_item :path="'/suppermall/home'" >
                         <div slot="img" ><img src="../../../assets/img/tabbar/Iron/home.svg" alt=""></div>
                         <div slot="img_active"><img src="../../../assets/img/tabbar/Iron/home_active.svg" alt=""></div>
                         <div slot="font">主页</div>
                     </tabbar_item>
 
-                    <tabbar_item :path="'/category'">
+                    <tabbar_item :path="'/suppermall/category'">
                         <div slot="img"><img src="../../../assets/img/tabbar/Iron/classify.svg" alt=""></div>
                         <div slot="img_active"><img src="../../../assets/img/tabbar/Iron/classify_active.svg" alt=""></div>
                         <div slot="font">分类</div>
                     </tabbar_item>
 
-                    <tabbar_item :path="'/cart'">
+                    <tabbar_item :path="'/suppermall/cart'">
                         <div slot="img"><img src="../../../assets/img/tabbar/Iron/cart.svg" alt=""></div>
                         <div slot="img_active"><img src="../../../assets/img/tabbar/Iron/cart_active.svg" alt=""></div>
                         <div slot="font">购物车</div>
                     </tabbar_item>
 
-                    <tabbar_item :path="'/profile'">
+                    <tabbar_item :path="'/suppermall/profile'">
                         <div slot="img"><img src="../../../assets/img/tabbar/Iron/profile.svg" alt=""></div>
                         <div slot="img_active"><img src="../../../assets/img/tabbar/Iron/profile_active.svg" alt=""></div>
                         <div slot="font">个人中心</div>

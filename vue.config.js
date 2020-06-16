@@ -1,7 +1,7 @@
 //vue.config.js
 const resolve = dir => require('path').join(__dirname, dir);
 module.exports = {
-  publicPath: '/suppermall/',
+  publicPath: '/suppermall',
   outputDir: 'dist/suppermall',
   chainWebpack: config => {
     config.resolve.alias
@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
   proxy: {
     '/api': {
-      target: 'http://192.168.1.11:80',
+      target: 'http://106.52.236.120:8080',
       ws: true,
       changeOrigin: true
     }

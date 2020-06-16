@@ -19,6 +19,7 @@
 <style>
 @import "assets/css/base.css";
   #app{
-    /*position: relative;*/
+    position: relative;
+    overflow: hidden;
   }
 </style>

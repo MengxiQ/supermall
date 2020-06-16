@@ -35,7 +35,8 @@
         position: absolute;
         height: 44px;
         bottom: 44px;
-        width: 100%;
+        left: 0;
+        right: 0;
         line-height: 44px;
         box-shadow: -1px 0 1px rgba(224, 224, 224, 0.6);
     }

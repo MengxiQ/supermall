@@ -75,118 +75,118 @@
         //
         goods:{
           'pop':{page:1,list:[{
-              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp',},
+              show:{img:'http://106.52.236.120:8080/untitled3/static/images/goodsdetail/A-001/swiper/A-001-1.webp',},
               title:'2020春秋新款韩系连衣裙女法式碎花裙长裙收腰赫本很仙过膝裙',
               price:'39.99',
               cfav:'66',
               iid:'A-001'
             },{
-              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-2.webp',},
+              show:{img:'http://106.52.236.120:8080/untitled3/static/images/goodsdetail/A-001/swiper/A-001-2.webp',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'50.99',
               cfav:'16',
               iid:'A-002'
             }
             ,{
-              show:{img:'http://localhost/untitled3/static/images/goodsdetail/A-001/swiper/A-001-3.webp',},
+              show:{img:'http://106.52.236.120:8080/untitled3/static/images/goodsdetail/A-001/swiper/A-001-3.webp',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'9.99',
               cfav:'1000',
                 iid:'A-003'
             },{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/new/03.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/new/03.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/new/03.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/new/03.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             }
               ]},
           'new':{page:1,list:[{
-              show:{img:'http://192.168.1.11/goods/pop/02.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/pop/02.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66',
               id:'B0001'
             },{
-              show:{img:'http://192.168.1.11/goods/pop/02.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/pop/02.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66',
               id:'B0002'
             }
             ,{
-              show:{img:'http://192.168.1.11/goods/pop/02.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/pop/02.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/pop/02.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/pop/02.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/pop/02.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/pop/02.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             }
             ]},
           'sell':{page:1,list:[{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66',
               id:'C001'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66',
               id:'C002'
             }
             ,{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66',
               id:'C-003'
             }
             ,{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
             },{
-              show:{img:'http://192.168.1.11/goods/sell/01.jpg',},
+              show:{img:'http://106.52.236.120:8080/static/images/goods/sell/01.jpg',},
               title:'时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得',
               price:'99.9',
               cfav:'66'
@@ -331,7 +331,7 @@
       **/
     created() {
       //请求多个数据
-      // this.getHomeMulti();
+      this.getHomeMulti();
       // this.getHomeGoods('pop');
       // this.getHomeGoods('new');
       // this.getHomeGoods('sell');
