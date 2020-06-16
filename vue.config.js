@@ -1,8 +1,8 @@
 //vue.config.js
 const resolve = dir => require('path').join(__dirname, dir);
 module.exports = {
-  publicPath: '/suppermall',
-  outputDir: 'dist/suppermall',
+  publicPath: '/suppermall/',
+  outputDir: 'dist/suppermall/',
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))

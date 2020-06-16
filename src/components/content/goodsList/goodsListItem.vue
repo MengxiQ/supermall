@@ -36,6 +36,7 @@
       },
     methods:{
       itemclick(){//跳转到详情页
+              console.log("click!")
         // console.log(this.goods_item.iid);
         this.$router.push({
           path:"/detail",

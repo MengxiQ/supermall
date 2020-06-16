@@ -10,34 +10,35 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path:'/suppermall',
-    redirect:'/suppermall/home'
+    path:'/',
+    redirect:'/home'
   },
   {
-    path:'/suppermall/home',
+    path:'/home',
     component:home
   },
   {
-    path:'/suppermall/category',
+    path:'/category',
     component:category
   },
   {
-    path:'/suppermall/cart',
+    path:'/cart',
     component:cart
   },
   {
-    path:'/suppermall/profile',
+    path:'/profile',
     component:profile
   },
   {
-    path:'/suppermall/detail',
+    path:'/detail',
     component:detail
   }
 ]
 
 const router = new VueRouter({
   routes,
-  mode:'history'
+  mode:'history',
+  base:"/suppermall/"
 })
 
 export default router
