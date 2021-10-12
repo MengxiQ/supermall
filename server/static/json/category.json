@@ -1,0 +1,49 @@
+{
+  "key": "上衣",
+  "values": {
+    "list": [{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "秋季新品"
+    },{
+      "img": "http://localhost:3000/img/recommend/%E5%A5%B3%E8%A3%85.webp",
+      "title": "衬衫"
+    }
+    ]
+  }
+}

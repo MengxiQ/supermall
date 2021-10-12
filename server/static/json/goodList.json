@@ -1,0 +1,185 @@
+{
+    "pop": {
+        "page": 1,
+        "list": [
+            {
+                "show": {
+                    "img": "http://localhost:3000/img/goodsdetail/A-001/swiper/AD-001.webp"
+                },
+                "title": "2020春秋新款韩系连衣裙女法式碎花裙长裙收腰赫本很仙过膝裙",
+                "price": 39.99,
+                "cfav": 66,
+                "iid": "A-001"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "50.99",
+                "cfav": "16",
+                "iid": "A-002"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "9.99",
+                "cfav": "1000",
+                "iid": "A-003"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            }
+        ]
+    },
+    "new": {
+        "page": 1,
+        "list": [
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66",
+                "iid": "B0001"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66",
+                "iid": "B0002"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            }
+        ]
+    },
+    "sell": {
+        "page": 1,
+        "list": [
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66",
+                "iid": "C001"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66",
+                "iid": "C002"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66",
+                "iid": "C-003"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            },
+            {
+                "show": {
+                    "img": "http://localhost:3000/A-001.webp"
+                },
+                "title": "时尚最骚最漂亮最美丽的汉服+女神标配+附赠男友一枚先到先得",
+                "price": "99.9",
+                "cfav": "66"
+            }
+        ]
+    }
+}
