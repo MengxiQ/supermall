@@ -20,14 +20,14 @@ npm run server
 # 2. 项目截图
 ## 2.1 首页
 
-<img src="D:\Projects\supermall-master\doc\images\首页1.png" alt="首页1" style="zoom:50%;" />
-<img src="D:\Projects\supermall-master\doc\images\首页2.png" alt="首页2" style="zoom:50%;" />
+<img src="doc/images/首页1.png" alt="首页1" style="zoom:50%;" />
+<img src="doc/images/首页2.png" alt="首页2" style="zoom:50%;" />
 ## 2.2 详情页
-<img src="D:\Projects\supermall-master\doc\images\详情页1.png" alt="详情页1" style="zoom:50%;" />
-<img src="D:\Projects\supermall-master\doc\images\详情页2.png" alt="详情页2" style="zoom:50%;" />
-<img src="D:\Projects\supermall-master\doc\images\详情页3.png" alt="详情页3" style="zoom:50%;" />
+<img src="doc/images/详情页1.png" alt="详情页1" style="zoom:50%;" />
+<img src="doc/images/详情页2.png" alt="详情页2" style="zoom:50%;" />
+<img src="doc/images/详情页3.png" alt="详情页3" style="zoom:50%;" />
 ## 2.3 购物车
-<img src="D:\Projects\supermall-master\doc\images\购物车.png" alt="购物车" style="zoom:50%;" />
+<img src="doc/images/购物车.png" alt="购物车" style="zoom:50%;" />
 
 ## 2.4 个人中心
-<img src="D:\Projects\supermall-master\doc\images\个人中心.png" alt="个人中心" style="zoom:50%;" />
+<img src="doc/images/个人中心.png" alt="个人中心" style="zoom:50%;" />
